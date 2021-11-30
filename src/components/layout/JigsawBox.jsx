@@ -7,7 +7,7 @@ const JigsawBoxContainer = styled.div`
   //width: 80%;
   //height: 100%;
 
-  height: 100%;
+  height: calc(100% - 40px); //20px margin top and 20px bottom
   margin: 20px;
   flex: 1 1 auto;
 `;

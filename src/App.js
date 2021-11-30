@@ -19,6 +19,7 @@ const AppContainer = styled.div`
     rgba(29, 24, 38, 1) 100%
   );
   flex-flow: column;
+  min-height: 100vh; //viewport height
   height: 100%;
 `;
 
