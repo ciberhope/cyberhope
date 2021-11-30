@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Titulo>
-        CyberAjuda! <small>o planeta</small>
+        Cyberhope <small>quebra cabe¢a ao quadrado</small>
       </Titulo>
     </HeaderContainer>
   );
