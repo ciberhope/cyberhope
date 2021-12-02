@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 //header
 const Titulo = styled.h1`
-  color: #b874fc;
+  color: #f7c1dc;
 `;
 
 const Pergunta = (props) => {

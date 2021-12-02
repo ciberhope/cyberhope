@@ -1,30 +1,34 @@
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
-  height: 50px;
-  background: rgb(33, 33, 43);
-  background: linear-gradient(
-    0deg,
-    rgba(33, 33, 43, 1) 0%,
-    rgba(29, 24, 38, 1) 100%
-  );
-  color: #fff;
-  border-bottom: 1px solid #b874fc;
+  height: 70px;
+  background: #030729;
+  color: #b04c74;
+  border-bottom: 1px solid #fff;
+  display: flex;
+`;
+const ImgContainer = styled.img`
+  height: 100%;
 `;
 
 const Titulo = styled.h2`
-  font-size: 1em;
+  font-size: 1.3em;
   padding-left: 20px;
 
   small {
-    font-size: 0.5em;
+    font-size: 0.8em;
+    color: #fff;
   }
 `;
 const Header = () => {
   return (
     <HeaderContainer>
+      <ImgContainer src="https://i.imgur.com/Y0HIRLZ.jpg" alt="LogoMarca" />
       <Titulo>
-        Cyberhope <small>quebra cabe¢a ao quadrado</small>
+        CyberHope
+        <small>
+          &nbsp;&nbsp;&nbsp;Aprenda, ajude e dissemine a esperança!!!
+        </small>
       </Titulo>
     </HeaderContainer>
   );

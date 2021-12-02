@@ -38,6 +38,12 @@ const CaixaDeAssuntos = (props) => {
   );
 
   useEffect(() => {
+    setIndiceDaPerguntaAtual(0);
+    const p = pegaPerguntaEmSequencia();
+    setPerguntasERespostas(p);
+  }, [subAssunto]);
+
+  useEffect(() => {
     const novoIndice =
       indiceDaPerguntaAtual + 1 > dadosDePerguntasDoSubAssunto.length - 1
         ? 0
@@ -46,6 +52,7 @@ const CaixaDeAssuntos = (props) => {
   }, [perguntasERespostas]);
 
   const pergunta = perguntasERespostas.pergunta;
+  
   const respostas = [...perguntasERespostas.respostasErradas];
   respostas.push(perguntasERespostas.respostaCerta);
 
@@ -62,7 +69,10 @@ const CaixaDeAssuntos = (props) => {
   return (
     <>
       <Container>
-        <JigsawBox tilesDisponiveis={numeroDeAcertos * 3} />
+        <JigsawBox
+          subAssunto={subAssunto}
+          tilesDisponiveis={numeroDeAcertos * 3}
+        />
 
         {numeroDeAcertos < 3 && (
           <QuestionSection>
