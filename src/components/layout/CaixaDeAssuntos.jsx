@@ -46,6 +46,7 @@ const CaixaDeAssuntos = (props) => {
   }, [perguntasERespostas]);
 
   const pergunta = perguntasERespostas.pergunta;
+  
   const respostas = [...perguntasERespostas.respostasErradas];
   respostas.push(perguntasERespostas.respostaCerta);
 
@@ -62,7 +63,10 @@ const CaixaDeAssuntos = (props) => {
   return (
     <>
       <Container>
-        <JigsawBox tilesDisponiveis={numeroDeAcertos * 3} />
+        <JigsawBox
+          subAssunto={subAssunto}
+          tilesDisponiveis={numeroDeAcertos * 3}
+        />
 
         {numeroDeAcertos < 3 && (
           <QuestionSection>

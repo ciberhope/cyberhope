@@ -5,36 +5,35 @@ const AssuntoBox = styled.div`
   padding: 20px;
   border: 1px solid black;
   background: ${(props) =>
-    props.selected ? "rgb(53, 33, 43)" : "rgb(33, 33, 43)"};
+    props.selected ? "rgb(204, 168, 49)" : "rgb(176, 76, 116)"};
   width: 40%;
   max-height: 20vh;
   box-shadow: 0px 0px 15px 5px rgba(179, 98, 184, 0.36);
-
   cursor: pointer;
 
   &:hover {
     background: ${(props) =>
-      props.selected ? "rgb(53, 33, 43)" : "rgb(63, 63, 73);"};
+      props.selected ? "rgb(166, 65, 105)" : "rgb(166, 65, 105);"};
     box-shadow: 0px 0px 15px 5px rgba(239, 108, 204, 0.36);
     transform: scale(1.15);
   }
 
   transition: all 0.3s ease-in-out;
   span {
-    color: #fff;
+    color: #000;
     font-size: 1.1em;
   }
 `;
 
 const SubAssuntoBox = styled.div`
   h2 {
-    color: #fff;
+    color: #000;
   }
   margin: 10px auto;
   padding: 10px;
   border: 1px solid black;
   background: ${(props) =>
-    props.selected ? "rgb(53, 33, 43)" : "rgb(33, 33, 43)"};
+    props.selected ? "rgb(250, 214, 7)" : "rgb(209, 84, 134)"};
   width: 20%;
   max-height: 10vh;
   box-shadow: 0px 0px 15px 5px rgba(179, 98, 184, 0.36);
@@ -51,7 +50,7 @@ const SubAssuntoBox = styled.div`
   transition: all 0.3s ease-in-out;
 
   span {
-    color: #fff;
+    color: #000;
     font-size: 0.9em;
   }
 `;
