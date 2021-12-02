@@ -20,8 +20,8 @@ const AppContainer = styled.div`
       rgba(3, 7, 41, 1) 100%
   );
   flex-flow: column;
-  height: 100vh; //100% altura da tela (viewportHeight)
-  overflow: auto;
+  min-height: 100vh; //viewport height
+  height: 100%;
 `;
 
 const BotaoCaixaDeAssuntosContainer = styled.div`
