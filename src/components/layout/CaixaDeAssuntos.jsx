@@ -38,6 +38,12 @@ const CaixaDeAssuntos = (props) => {
   );
 
   useEffect(() => {
+    setIndiceDaPerguntaAtual(0);
+    const p = pegaPerguntaEmSequencia();
+    setPerguntasERespostas(p);
+  }, [subAssunto]);
+
+  useEffect(() => {
     const novoIndice =
       indiceDaPerguntaAtual + 1 > dadosDePerguntasDoSubAssunto.length - 1
         ? 0

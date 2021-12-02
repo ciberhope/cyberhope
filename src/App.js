@@ -46,7 +46,7 @@ const carregaDadosDaInternet = (url, callback) => {
       }
       const dadosMapeados = results.data.slice(1).map((item, index) => {
         return {
-          categoria: item[0],
+          categoria: item[0].toUpperCase() === "Violência nos zoológicos".toUpperCase() ? "Mals tratos em zoológicos" : item[0].trim(),
           pergunta: item[1],
           respostaCerta: item[2],
           respostasErradas: [item[3], item[4], item[5]]
@@ -143,7 +143,7 @@ export default function App() {
               <CaixaDeAssuntos
                   subAssunto={subAssuntoSelecionado}
                   dadosDePerguntasDoSubAssunto={dadosDeAssuntoSelecionado.filter(
-                      (item) => item.categoria === subAssuntoSelecionado.toUpperCase()
+                      (item) => item.categoria.toUpperCase() === subAssuntoSelecionado.toUpperCase()
                   )}
               />
           )}
